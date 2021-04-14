@@ -138,7 +138,7 @@ def test_model(audio_data, sr):
     print(log_likelihood)
     winner = np.argmax(log_likelihood)
     if np.max(log_likelihood) > -35:
-        print("\tdetected as - ", speakers[winner])
+        print("\tdetected as -", speakers[winner].split("/")[2])
         return True
     else:
         return False
