@@ -61,7 +61,8 @@ def record_audio_train():
         sd.wait()
 
         print("recording stopped")
-        
+        if not os.path.exists('training_set'):
+            os.makedirs('training_set')
         OUTPUT_FILENAME = Name + "-sample" + str(count) + ".wav"
         WAVE_OUTPUT_FILENAME = os.path.join("training_set", OUTPUT_FILENAME)
         trainedfilelist = open("training_set_addition.txt", 'a')
@@ -90,6 +91,8 @@ def record_audio_test():
 
 def train_model():
     source = "./training_set/"
+    if not os.path.exists('trained_models'):
+            os.makedirs('trained_models')
     dest = "./trained_models/"
     train_file = "./training_set_addition.txt"
     file_paths = open(train_file, 'r')
