@@ -5,7 +5,10 @@ and recognizes the keyword and a command using a Convolutional Neural Network (C
 
 # Contributors
 
-Anirudh Srinivasan\n
-Amrish R\n
-Gopinaath V\n
+Anirudh Srinivasan
+
+Amrish R
+
+Gopinaath V
+
 Abhishek Padmanabhan
